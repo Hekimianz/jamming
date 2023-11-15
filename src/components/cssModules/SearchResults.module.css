@@ -1,0 +1,26 @@
+.container {
+  background-color: rgba(7, 24, 52, 0.7);
+  border: 6px solid rgba(2, 4, 27, 0.5);
+  border-radius: 8px;
+  overflow: scroll;
+  height: 700px;
+}
+
+.title {
+  margin: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid orange;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .title {
+    font-size: 1em;
+  }
+}

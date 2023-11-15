@@ -1,0 +1,47 @@
+.container {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name {
+  margin: 0;
+}
+
+.artist {
+  margin: 0;
+}
+
+.add {
+  cursor: pointer;
+  font-size: 1.3em;
+  transition: 0.2s all;
+  font-weight: bold;
+}
+
+.container:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.add:hover {
+  color: #f57a21;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    font-size: 0.5em;
+  }
+
+  .add {
+    margin-left: 10px;
+  }
+}

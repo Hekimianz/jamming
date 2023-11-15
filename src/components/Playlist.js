@@ -1,7 +1,11 @@
 import styles from "./cssModules/Playlist.module.css";
 
 function Playlist() {
-  return <h1 className={styles.head}>Playlist Component</h1>;
+  return (
+    <div className={styles.container}>
+      <h2 className={styles.title}>Playlist</h2>
+    </div>
+  );
 }
 
 export default Playlist;
