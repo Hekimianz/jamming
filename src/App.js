@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchBar";
 import Navbar from "./components/Navbar";
 import bgImg from "/Users/aramhekimian/repos/jamming/src/assets/background.jpg";
 import songs from "./mockData";
+import styles from "./components/cssModules/App.module.css";
 
 const containerStyles = {
   display: "flex",
@@ -28,6 +29,17 @@ function App() {
       <Navbar />
       <SearchBar />
       <Results data={data} />
+      <footer style={{ color: "white", marginBottom: "15px" }}>
+        Made with ♥️ by{" "}
+        <a
+          className={styles.link}
+          href="https://github.com/Hekimianz"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Aram Hekimian
+        </a>
+      </footer>
     </div>
   );
 }
