@@ -4,6 +4,8 @@
   border-radius: 8px;
   overflow: scroll;
   height: 700px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -11,6 +13,19 @@
   padding-bottom: 15px;
   border-bottom: 1px solid orange;
   text-align: center;
+}
+
+.input {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: white;
+  border: none;
+  width: 75%;
+  font-size: 1.2em;
+  height: 40px;
+  align-self: center;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width: 768px) {

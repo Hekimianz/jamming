@@ -1,6 +1,12 @@
 import styles from "./cssModules/Track.module.css";
 
 function Track(props) {
+  let button = "";
+  if (props.added === true) {
+    button = "-";
+  } else {
+    button = "+";
+  }
   return (
     <div className={styles.container}>
       <div>
@@ -10,7 +16,7 @@ function Track(props) {
         </h3>
       </div>
       <div>
-        <p className={styles.add}>+</p>
+        <p className={styles.add}>{button}</p>
       </div>
     </div>
   );

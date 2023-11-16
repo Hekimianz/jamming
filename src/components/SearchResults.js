@@ -1,11 +1,11 @@
 import styles from "./cssModules/SearchResults.module.css";
 import Tracklist from "./Tracklist";
 
-function SearchResults({ data }) {
+function SearchResults({ songs }) {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Results</h2>
-      <Tracklist data={data} />
+      <Tracklist songs={songs} />
     </div>
   );
 }

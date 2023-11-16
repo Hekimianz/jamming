@@ -3,7 +3,7 @@ import Results from "./components/Results";
 import SearchBar from "./components/SearchBar";
 import Navbar from "./components/Navbar";
 import bgImg from "/Users/aramhekimian/repos/jamming/src/assets/background.jpg";
-import songs from "./mockData";
+import { songs, playlist } from "./mockData";
 import styles from "./components/cssModules/App.module.css";
 
 const containerStyles = {
@@ -19,16 +19,26 @@ const containerStyles = {
 };
 
 function App() {
-  const [data, setData] = useState([]);
+  const [songsData, setSongsData] = useState([]);
   useEffect(() => {
-    setData(songs);
+    setSongsData(songs);
   }, []);
+
+  const [playlistData, setPlaylistData] = useState([]);
+  useEffect(() => {
+    setPlaylistData(playlist);
+  }, []);
+  console.log(playlist.name);
 
   return (
     <div style={containerStyles}>
       <Navbar />
       <SearchBar />
-      <Results data={data} />
+      <Results
+        songs={songsData}
+        playlist={playlistData}
+        changePlaylist={setPlaylistData}
+      />
       <footer style={{ color: "white", marginBottom: "15px" }}>
         Made with ♥️ by{" "}
         <a

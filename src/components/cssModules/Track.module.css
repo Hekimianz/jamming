@@ -19,6 +19,8 @@
   font-size: 1.3em;
   transition: 0.2s all;
   font-weight: bold;
+  text-align: center;
+  width: 25px;
 }
 
 .container:hover {
