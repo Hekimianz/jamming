@@ -7,6 +7,31 @@ function Track(props) {
   } else {
     button = "+";
   }
+
+  const addSongToPlaylist = (e) => {
+    const id = e.target.id;
+    const chosenSong = props.allSongs.filter((song) => song.id === id);
+    chosenSong[0].added = true;
+    props.changePlaylist((prev) => {
+      return {
+        name: prev.name,
+        songs: [...prev.songs, chosenSong[0]],
+      };
+    });
+  };
+
+  const delSongFromPlaylist = (e) => {
+    const id = e.target.id;
+    const chosenSong = props.playlist.songs.filter((song) => song.id === id);
+    chosenSong[0].added = false;
+
+    props.changePlaylist((prev) => {
+      return {
+        name: prev.name,
+        songs: [...prev.songs.filter((song) => song.id !== id)],
+      };
+    });
+  };
   return (
     <div className={styles.container}>
       <div>
@@ -16,7 +41,13 @@ function Track(props) {
         </h3>
       </div>
       <div>
-        <p className={styles.add}>{button}</p>
+        <p
+          className={styles.add}
+          onClick={button === "+" ? addSongToPlaylist : delSongFromPlaylist}
+          id={props.id}
+        >
+          {button}
+        </p>
       </div>
     </div>
   );

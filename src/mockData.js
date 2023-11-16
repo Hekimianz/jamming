@@ -135,23 +135,8 @@ const songs = [
 ];
 
 const playlist = {
-  name: "🔥 Barz 🔥",
-  songs: [
-    {
-      title: "Fall in Love (ft. Ciscero)",
-      artist: "Goldlink",
-      album: "Fall in Love",
-      id: "FaGoFa",
-      added: true,
-    },
-    {
-      title: "Where Ya At (ft. Drake)",
-      artist: "Future",
-      album: "DS2 (Deluxe)",
-      id: "WhFuDS",
-      added: true,
-    },
-  ],
+  name: "",
+  songs: [],
 };
 
 export { songs, playlist };

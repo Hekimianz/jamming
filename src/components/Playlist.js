@@ -10,6 +10,21 @@ function Playlist({ playlist, changePlaylist }) {
       };
     });
   }
+
+  const checkPlaylistLength = () => {
+    if (playlist.hasOwnProperty("songs")) {
+      if (playlist.songs.length !== 0) {
+        return styles.save;
+      } else {
+        return styles.disabled;
+      }
+    } else {
+      return styles.disabled;
+    }
+  };
+
+  console.log(playlist);
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Playlist</h2>
@@ -18,8 +33,14 @@ function Playlist({ playlist, changePlaylist }) {
         value={playlist.name ?? ""}
         className={styles.input}
         onChange={changeName}
+        placeholder="Enter playlist name"
       />
-      <Tracklist songs={playlist.songs} />
+      <Tracklist
+        songs={playlist.songs}
+        playlist={playlist}
+        changePlaylist={changePlaylist}
+      />
+      <button className={checkPlaylistLength()}>Save to Spotify</button>
     </div>
   );
 }

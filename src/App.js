@@ -24,11 +24,10 @@ function App() {
     setSongsData(songs);
   }, []);
 
-  const [playlistData, setPlaylistData] = useState([]);
+  const [playlistData, setPlaylistData] = useState({});
   useEffect(() => {
     setPlaylistData(playlist);
   }, []);
-  console.log(playlist.name);
 
   return (
     <div style={containerStyles}>
