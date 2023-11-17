@@ -9,6 +9,7 @@ function SearchBar(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.searchSong();
+    setInput("");
   };
   return (
     <>
