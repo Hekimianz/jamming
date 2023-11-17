@@ -30,6 +30,7 @@ function Track(props) {
       return {
         name: prev.name,
         songs: [...prev.songs.filter((song) => song.id !== id)],
+        allUris: [...prev.allUris.filter((uri) => uri !== chosenSong[0].uri)],
       };
     });
   };

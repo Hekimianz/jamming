@@ -2,7 +2,13 @@ import { useEffect, useState } from "react";
 import styles from "./cssModules/Playlist.module.css";
 import Tracklist from "./Tracklist";
 
-function Playlist({ playlist, changePlaylist, authUrl, token }) {
+function Playlist({
+  playlist,
+  changePlaylist,
+  authUrl,
+  token,
+  createPlaylist,
+}) {
   const [loggedIn, setLoggedIn] = useState(false);
   useEffect(() => {
     if (window.localStorage.getItem("token")) {
@@ -48,7 +54,12 @@ function Playlist({ playlist, changePlaylist, authUrl, token }) {
         playlist={playlist}
         changePlaylist={changePlaylist}
       />
-      <button className={checkPlaylistLength()}>Save to Spotify</button>
+      <button
+        className={checkPlaylistLength()}
+        onClick={checkPlaylistLength() === styles.save ? createPlaylist : null}
+      >
+        Save to Spotify
+      </button>
       {loggedIn ? (
         <p className={styles.loggedIn}>Logged in!</p>
       ) : (

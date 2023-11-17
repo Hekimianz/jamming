@@ -4,7 +4,7 @@ import styles from "./cssModules/Navbar.module.css";
 function Navbar() {
   return (
     <>
-      <img src={logo} className={styles.logo} />
+      <img src={logo} className={styles.logo} alt="Jamming logo" />
     </>
   );
 }
