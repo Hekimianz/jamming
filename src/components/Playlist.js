@@ -13,7 +13,7 @@ function Playlist({ playlist, changePlaylist }) {
 
   const checkPlaylistLength = () => {
     if (playlist.hasOwnProperty("songs")) {
-      if (playlist.songs.length !== 0) {
+      if (playlist.songs.length !== 0 && playlist.name !== "") {
         return styles.save;
       } else {
         return styles.disabled;

@@ -5,6 +5,7 @@ const songs = [
     album: "Konvicted",
     id: "SmAkKo",
     added: false,
+    uri: "2kQuhkFX7uSVepCD3h29g5",
   },
   {
     title: "Babydoll",
@@ -12,6 +13,7 @@ const songs = [
     album: "Don't Forget About Me, Demos",
     id: "BaDoDo",
     added: false,
+    uri: "7yNf9YjeO5JXUE3JEBgnYc",
   },
   {
     title: "Planet Shrooms",
@@ -19,6 +21,7 @@ const songs = [
     album: "Planet Shrooms",
     id: "PlWoPl",
     added: false,
+    uri: "16OlG0GeSYrJZQpDd16i79",
   },
   {
     title: "November 18th",
@@ -26,6 +29,7 @@ const songs = [
     album: "So Far Gone",
     id: "NoDrSo",
     added: false,
+    uri: "0JaVdpmiex2EP7bBzyKVTa",
   },
   {
     title: "Narcos",
@@ -33,6 +37,7 @@ const songs = [
     album: "Shadow of a Doubt",
     id: "NaFrSh",
     added: false,
+    uri: "1lLffqf4fLFGfoa7BpokdB",
   },
   {
     title: "A Milli",
@@ -40,6 +45,7 @@ const songs = [
     album: "Tha Carter III",
     id: "AMLiTh",
     added: false,
+    uri: "3uqinR4FCjLv28bkrTdNX5",
   },
   {
     title: "From Adam (ft. Lil Wayne)",
@@ -47,6 +53,7 @@ const songs = [
     album: "The Documentary 2.5",
     id: "FrThTh",
     added: false,
+    uri: "1tcx5cpqdcwjy5Oo8rshs5",
   },
   {
     title: "Lodi Dodi (ft. Nancy Fletcher)",
@@ -54,6 +61,7 @@ const songs = [
     album: "Doggystyle",
     id: "LoSnDo",
     added: false,
+    uri: "6OtfwrzhIaIg6gmnzgPlu1",
   },
   {
     title: "Lately (ft. Bugus & Musa)",
@@ -61,6 +69,7 @@ const songs = [
     album: "Silence",
     id: "LaRuSi",
     added: false,
+    uri: "4bI8a3bXcI0CIobu3M0F3W",
   },
   {
     title: "Coming Back (ft. Mac Miller)",
@@ -68,6 +77,7 @@ const songs = [
     album: "Genesis",
     id: "CoDoGe",
     added: false,
+    uri: "1WsRuvitfegWXQJKRgRZrj",
   },
   {
     title: "Half Manne Half Cocaine",
@@ -75,6 +85,7 @@ const songs = [
     album: "Bandana",
     id: "HaFrBa",
     added: false,
+    uri: "5jqpm69UgQa1OSNhj8rjn4",
   },
   {
     title: "Bat Box 9",
@@ -82,6 +93,7 @@ const songs = [
     album: "Damn EP",
     id: "BaHoDa",
     added: false,
+    uri: "0rm61xV00FWmZv5UD72lcr",
   },
   {
     title: "BABY NUEVA",
@@ -89,13 +101,15 @@ const songs = [
     album: "nadie sabe lo que va a pasar mañana",
     id: "BABana",
     added: false,
+    uri: "3NhstUmrlhaN1M6hP8zMbb",
   },
   {
-    title: "Rap Child",
+    title: "Rap Trash",
     artist: "Koi Child",
     album: "Koi Child",
     id: "RaKoKo",
     added: false,
+    uri: "3cf8J6iohKq7hLSirL3Pb6",
   },
   {
     title: "Momentz (ft. De La Soul)",
@@ -103,6 +117,7 @@ const songs = [
     album: "Humanz (Deluxe)",
     id: "MoGoHu",
     added: false,
+    uri: "2RCp9QBnFSxdKe8RD4xF8s",
   },
   {
     title: "What They Want",
@@ -110,6 +125,7 @@ const songs = [
     album: "What They Want",
     id: "WhRuWh",
     added: false,
+    uri: "3pndPhlQWjuSoXhcIIdBjv",
   },
   {
     title: "Hello (ft. Dr.Dre & MC Ren)",
@@ -117,6 +133,7 @@ const songs = [
     album: "War & Peace vol. 2 (The Peace Disc)",
     id: "HeIcWa",
     added: false,
+    uri: "60uesDF4UyLUs61FgiDkdp",
   },
   {
     title: "Where Ya At (ft. Drake)",
@@ -124,6 +141,7 @@ const songs = [
     album: "DS2 (Deluxe)",
     id: "WhFuDS",
     added: false,
+    uri: "5nN8BwAQDJDguq7Dpd3JQQ",
   },
   {
     title: "Fall in Love (ft. Ciscero)",
@@ -131,12 +149,14 @@ const songs = [
     album: "Fall in Love",
     id: "FaGoFa",
     added: false,
+    uri: "2RISD4aJrioDB54exm5WWM",
   },
 ];
 
 const playlist = {
   name: "",
   songs: [],
+  allUris: [],
 };
 
 export { songs, playlist };

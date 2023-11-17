@@ -16,6 +16,7 @@ function Track(props) {
       return {
         name: prev.name,
         songs: [...prev.songs, chosenSong[0]],
+        allUris: [...prev.allUris, chosenSong[0].uri],
       };
     });
   };
