@@ -39,6 +39,15 @@ function Playlist({
     }
   };
 
+  const submitPlaylist = () => {
+    createPlaylist();
+    changePlaylist({
+      name: "",
+      songs: [],
+      allUris: [],
+    });
+  };
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Playlist</h2>
@@ -56,7 +65,7 @@ function Playlist({
       />
       <button
         className={checkPlaylistLength()}
-        onClick={checkPlaylistLength() === styles.save ? createPlaylist : null}
+        onClick={checkPlaylistLength() === styles.save ? submitPlaylist : null}
       >
         Save to Spotify
       </button>
