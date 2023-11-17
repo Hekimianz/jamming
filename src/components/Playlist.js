@@ -1,7 +1,15 @@
+import { useEffect, useState } from "react";
 import styles from "./cssModules/Playlist.module.css";
 import Tracklist from "./Tracklist";
 
-function Playlist({ playlist, changePlaylist }) {
+function Playlist({ playlist, changePlaylist, authUrl, token }) {
+  const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    if (window.localStorage.getItem("token")) {
+      setLoggedIn(true);
+    }
+  }, []);
+
   function changeName(e) {
     changePlaylist((prev) => {
       return {
@@ -14,16 +22,16 @@ function Playlist({ playlist, changePlaylist }) {
   const checkPlaylistLength = () => {
     if (playlist.hasOwnProperty("songs")) {
       if (playlist.songs.length !== 0 && playlist.name !== "") {
-        return styles.save;
+        if (loggedIn) {
+          return styles.save;
+        } else {
+          return styles.disabled;
+        }
       } else {
         return styles.disabled;
       }
-    } else {
-      return styles.disabled;
     }
   };
-
-  console.log(playlist);
 
   return (
     <div className={styles.container}>
@@ -41,6 +49,13 @@ function Playlist({ playlist, changePlaylist }) {
         changePlaylist={changePlaylist}
       />
       <button className={checkPlaylistLength()}>Save to Spotify</button>
+      {loggedIn ? (
+        <p className={styles.loggedIn}>Logged in!</p>
+      ) : (
+        <a href={authUrl} className={styles.notLogged}>
+          Log in to Spotify
+        </a>
+      )}
     </div>
   );
 }

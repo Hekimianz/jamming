@@ -6,6 +6,7 @@
   height: 700px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .title {
@@ -60,6 +61,21 @@
   border: 4px solid rgb(65, 54, 46);
   color: grey;
   cursor: not-allowed;
+}
+
+.notLogged,
+.loggedIn {
+  align-self: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.notLogged {
+  color: #f57a21;
+}
+
+.loggedIn {
+  color: grey;
 }
 
 @media screen and (max-width: 768px) {
